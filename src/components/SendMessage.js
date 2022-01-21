@@ -31,10 +31,12 @@ export const SendMessage = ({ scroll }) => {
               width: "70vw",
               maxWidth: "680px",
               fontSize: "14px",
+              color: "white",
               fontWeight: "500",
-              margin: "15px 10px 20px 0",
-              // marginBottom: "-5px",
+              margin: "15px 10px 20px 10px",
+              borderBottomColor: "white",
             }}
+            inputProps={{ "aria-label": "description" }}
             placeholder="メッセージを入力"
             type="text"
             value={msg}
@@ -45,6 +47,8 @@ export const SendMessage = ({ scroll }) => {
             style={{
               height: "40px",
               width: "100px",
+              color: "#CBD5E0",
+              border: "solid 1px grey",
               fontSize: "12px",
               fontWeight: "600",
               margin: "10px",
@@ -66,6 +70,6 @@ const SendMsg = styled.div`
   width: 100vw;
   position: fixed;
   bottom: 0;
-  z-index: 1000;
-  background: white;
+  border: solid 2px #333;
+  background: #242526;
 `;

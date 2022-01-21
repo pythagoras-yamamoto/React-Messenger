@@ -31,6 +31,7 @@ const NavWrapper = styled.div`
   background: #242526;
   position: fixed;
   z-index: 100;
+  border: solid 3px #333;
 `;
 
 const Nav = styled.nav`

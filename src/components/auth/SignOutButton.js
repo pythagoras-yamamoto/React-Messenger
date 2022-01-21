@@ -10,6 +10,7 @@ export const SignOutButton = () => {
         fontSize: "15px",
         borderRadius: "0",
         fontWeight: "600",
+        zIndex: "1000",
       }}
       onClick={() => auth.signOut()}
     >
