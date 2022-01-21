@@ -12,7 +12,7 @@ export const Navbar = () => {
         <div>
           {/* <Link to="/register">register</Link> */}
           <Link to="/login" className="nav-item">
-            ログイン
+            LOGIN
           </Link>
         </div>
       </Nav>

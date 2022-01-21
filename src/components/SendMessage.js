@@ -24,34 +24,43 @@ export const SendMessage = ({ scroll }) => {
   return (
     <div>
       <form onSubmit={sendMessage}>
-        <div className="sendMsg">
+        <SendMsg>
           <Input
             style={{
-              width: "78%",
-              fontSize: "15px",
-              fontWeight: "550",
-              marginLeft: "5px",
-              marginBottom: "-3px",
+              width: "70%",
+              fontSize: "14px",
+              fontWeight: "500",
+              marginRight: "10px",
+              // marginBottom: "-5px",
             }}
-            placeholder="Message..."
+            placeholder="メッセージを入力"
             type="text"
             value={msg}
             onChange={(e) => setMsg(e.target.value)}
           />
           <Button
+            variant="outlined"
             style={{
-              width: "18%",
-              fontSize: "15px",
-              fontWeight: "550",
-              margin: "4px 5% -13px 5%",
-              maxWidth: "200px",
+              height: "40px",
+              width: "10%",
+              fontSize: "12px",
+              fontWeight: "600",
+              // margin: "5px",
+              // margin: "4px 5% -13px 5%",
+              // maxWidth: "200px",
             }}
             type="submit"
           >
-            Send
+            送信
           </Button>
-        </div>
+        </SendMsg>
       </form>
     </div>
   );
 };
+
+const SendMsg = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+`;
