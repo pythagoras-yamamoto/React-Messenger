@@ -12,16 +12,20 @@ export const SignIn = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          height: "90vh",
+          height: "100vh",
           alignItems: "center",
+          background: "#333",
         }}
       >
         <Button
           style={{
-            padding: "30px",
-            fontSize: "20px",
+            padding: " 15px 30px",
+            fontSize: "14px",
             borderRadius: "0",
-            fontWeight: "600",
+            fontWeight: "500",
+            color: "white",
+            background: "#242526",
+            border: "solid 1px grey",
           }}
           onClick={signInWithGoogle}
         >

@@ -70,6 +70,6 @@ const SendMsg = styled.div`
   width: 100vw;
   position: fixed;
   bottom: 0;
-  border: solid 2px #333;
+  border-top: solid 3px #333;
   background: #242526;
 `;

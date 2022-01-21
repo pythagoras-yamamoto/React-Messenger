@@ -22,7 +22,7 @@ export const Chat = () => {
       <Navbar />
       <S>
         <Wrapper>
-          {/* <SignOutButton /> */}
+          <SignOutButton />
           <MsgWrapper>
             {messages.map(({ id, text, photoURL, uid }) => (
               <div>
@@ -41,8 +41,7 @@ export const Chat = () => {
             ))}
           </MsgWrapper>
         </Wrapper>
-      </S>{" "}
-      1
+      </S>
       <SendMessage />
     </>
   );
@@ -54,7 +53,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
-  background: #242526;
+  background: #242521;
 `;
 
 const MsgWrapper = styled.div`
@@ -80,13 +79,17 @@ const MsgItem = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  margin: 0 20px;
+  border-radius: 5px;
+  margin: 10px;
   display: flex;
+  min-width: 150px;
   align-items: center;
+  background: #0084ff;
 `;
 
 const Text = styled.p`
-  font-size: 1em;
+  padding-left: 14px;
+  font-size: 16px;
   word-break: normal;
 
   color: white;
