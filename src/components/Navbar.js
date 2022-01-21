@@ -1,22 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 
 export const Navbar = () => {
   return (
-    <NavWrapper>
-      <Nav>
-        <Link to="/" className="nav-item">
-          ChatApp
-        </Link>
-        <div>
-          {/* <Link to="/register">register</Link> */}
-          <Link to="/login" className="nav-item">
-            LOGIN
+    <BrowserRouter>
+      <NavWrapper>
+        <Nav>
+          <Link to="/" className="nav-item">
+            ChatApp
           </Link>
-        </div>
-      </Nav>
-    </NavWrapper>
+          <div>
+            {/* <Link to="/register">register</Link> */}
+            {/* <Link to="/login" className="nav-item">
+              LOGIN
+            </Link> */}
+          </div>
+        </Nav>
+      </NavWrapper>
+    </BrowserRouter>
   );
 };
 

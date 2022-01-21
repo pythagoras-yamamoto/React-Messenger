@@ -1,22 +1,14 @@
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import { Router } from "./router/Router";
-// import { Navbar } from "./components/Navbar";
-// import { Home } from "./pages/Home";
-// import { Register } from "./pages/Register";
+import { auth } from "./firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
+import { Chat } from "./components/Chat";
+import { SignIn } from "./components/SignIn";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Router />
-      {/* <Navbar />
-      <h1>zzzz</h1>
-      <Routes>
-        <Route exact path="/" components={Home} />
-        {/* <Route path="/register" components={Register} /> */}
-      {/* </Routes>  */}
-    </BrowserRouter>
-  );
+  const [user] = useAuthState(auth);
+
+  return <>{user ? <Chat /> : <SignIn />};</>;
 }
 
 export default App;

@@ -10,6 +10,7 @@ export const SendMessage = ({ scroll }) => {
 
   async function sendMessage(e) {
     e.preventDefault();
+    console.log("yes");
     const { uid, photoURL } = auth.currentUser;
 
     await db.collection("messages").add({
@@ -47,9 +48,6 @@ export const SendMessage = ({ scroll }) => {
               width: "100px",
               fontSize: "12px",
               fontWeight: "600",
-              // margin: "5px",
-              // margin: "4px 5% -13px 5%",
-              // maxWidth: "200px",
             }}
             type="submit"
           >
