@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { db, auth } from "../firebase";
-// import firebase from "firebase";
 import firebase from "firebase/compat/app";
-import { Input, Button } from "@material-ui/core";
 import styled from "styled-components";
+import { Input, Button } from "@material-ui/core";
+
+import { db, auth } from "../firebase";
 
 export const SendMessage = ({ scroll }) => {
   const [msg, setMsg] = useState("");
@@ -21,16 +21,18 @@ export const SendMessage = ({ scroll }) => {
     setMsg("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   }
+
   return (
     <div>
       <form onSubmit={sendMessage}>
         <SendMsg>
           <Input
             style={{
-              width: "70%",
+              width: "70vw",
+              maxWidth: "700px",
               fontSize: "14px",
               fontWeight: "500",
-              marginRight: "10px",
+              marginRight: "14px",
               // marginBottom: "-5px",
             }}
             placeholder="メッセージを入力"
@@ -42,7 +44,7 @@ export const SendMessage = ({ scroll }) => {
             variant="outlined"
             style={{
               height: "40px",
-              width: "10%",
+              width: "100px",
               fontSize: "12px",
               fontWeight: "600",
               // margin: "5px",
@@ -62,5 +64,6 @@ export const SendMessage = ({ scroll }) => {
 const SendMsg = styled.div`
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  margin-top: 20px;
+  width: 100vw;
 `;
