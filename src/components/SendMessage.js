@@ -10,7 +10,6 @@ export const SendMessage = ({ scroll }) => {
 
   async function sendMessage(e) {
     e.preventDefault();
-    console.log("yes");
     const { uid, photoURL } = auth.currentUser;
 
     await db.collection("messages").add({
@@ -30,10 +29,10 @@ export const SendMessage = ({ scroll }) => {
           <Input
             style={{
               width: "70vw",
-              maxWidth: "700px",
+              maxWidth: "680px",
               fontSize: "14px",
               fontWeight: "500",
-              marginRight: "14px",
+              margin: "15px 10px 20px 0",
               // marginBottom: "-5px",
             }}
             placeholder="メッセージを入力"
@@ -48,6 +47,7 @@ export const SendMessage = ({ scroll }) => {
               width: "100px",
               fontSize: "12px",
               fontWeight: "600",
+              margin: "10px",
             }}
             type="submit"
           >
@@ -64,4 +64,8 @@ const SendMsg = styled.div`
   justify-content: center;
   margin-top: 20px;
   width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  background: white;
 `;

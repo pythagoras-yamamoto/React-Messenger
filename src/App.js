@@ -3,12 +3,12 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { Chat } from "./components/Chat";
-import { SignIn } from "./components/SignIn";
+import { SignIn } from "./components/auth/SignIn";
 
 function App() {
   const [user] = useAuthState(auth);
 
-  return <>{user ? <Chat /> : <SignIn />};</>;
+  return <>{user ? <Chat /> : <SignIn />}</>;
 }
 
 export default App;

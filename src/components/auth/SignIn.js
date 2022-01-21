@@ -1,8 +1,8 @@
 import React from "react";
 import firebase from "firebase/compat/app";
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 import { Button } from "@material-ui/core";
-import { Navbar } from "./Navbar";
+import { Navbar } from "../Navbar";
 
 export const SignIn = () => {
   return (
@@ -12,7 +12,7 @@ export const SignIn = () => {
         style={{
           display: "flex",
           justifyContent: "center",
-          height: "100vh",
+          height: "90vh",
           alignItems: "center",
         }}
       >
