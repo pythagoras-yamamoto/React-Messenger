@@ -2,6 +2,20 @@ import React from "react";
 import styled from "styled-components";
 
 export const Register = () => {
+  // const [data, setData] = useState({
+  //   name: "",
+  //   email: "",
+  //   password: "",
+  //   error: null,
+  //   loading: false,
+  // });
+
+  // const { name, email, password, error, loading } = data;
+
+  // const handler = (e) => {
+
+  // }
+
   return (
     <WWrapper>
       <Wrapper>

@@ -1,5 +1,12 @@
 import React from "react";
+import { SendMessage } from "../components/SendMessage";
+// import { Chat } from "../components/Chat";
 
 export const Home = () => {
-  return <h1>test</h1>;
+  return (
+    <>
+      {/* <Chat /> */}
+      <SendMessage />
+    </>
+  );
 };
