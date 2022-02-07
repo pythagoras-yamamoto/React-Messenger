@@ -1,21 +1,18 @@
 import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
+import { SignOutButton } from "./auth/SignOutButton";
 
-export const Navbar = () => {
+export const Navbar = (photoURL) => {
   return (
     <BrowserRouter>
       <NavWrapper>
         <Nav>
-          <Link to="/" className="nav-item">
+          {/* <Link to="/" className="nav-item">
             ChatApp
-          </Link>
-          <div>
-            {/* <Link to="/register">register</Link> */}
-            {/* <Link to="/login" className="nav-item">
-              LOGIN
-            </Link> */}
-          </div>
+          </Link> */}
+          <Logo>ChatApp</Logo>
+          <SignOutButton />
         </Nav>
       </NavWrapper>
     </BrowserRouter>
@@ -32,6 +29,11 @@ const NavWrapper = styled.div`
   position: fixed;
   z-index: 100;
   border-bottom: solid 3px #333;
+`;
+
+const Logo = styled.h2`
+  color: white;
+  font-weight: 600;
 `;
 
 const Nav = styled.nav`

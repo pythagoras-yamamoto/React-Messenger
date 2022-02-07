@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { db, auth } from "../firebase";
 import { Navbar } from "./Navbar";
 import { SendMessage } from "./SendMessage";
-import { SignOutButton } from "./auth/SignOutButton";
 
 export const Chat = () => {
   const scroll = useRef();
@@ -19,10 +18,9 @@ export const Chat = () => {
   }, []);
   return (
     <>
-      <Navbar />
+      <Navbar photo={messages.photoURL} />
       <S>
         <Wrapper>
-          <SignOutButton />
           <MsgWrapper>
             {messages.map(({ id, text, photoURL, uid }) => (
               <div>
@@ -67,7 +65,7 @@ const MsgWrapper = styled.div`
   }
 `;
 
-const Photo = styled.img`
+export const Photo = styled.img`
   border-radius: 50%;
   margin: 20px;
   height: 50px;
