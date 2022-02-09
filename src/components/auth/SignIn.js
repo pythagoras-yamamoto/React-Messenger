@@ -1,5 +1,7 @@
 import React from "react";
 import firebase from "firebase/compat/app";
+import styled from "styled-components";
+
 import { auth } from "../../firebase";
 import { Button } from "@material-ui/core";
 import { Navbar } from "../Navbar";
@@ -8,15 +10,7 @@ export const SignIn = () => {
   return (
     <>
       <Navbar />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "100vh",
-          alignItems: "center",
-          background: "#333",
-        }}
-      >
+      <SignInWrapper>
         <Button
           style={{
             padding: " 15px 30px",
@@ -31,7 +25,7 @@ export const SignIn = () => {
         >
           Sign In With Google
         </Button>
-      </div>
+      </SignInWrapper>
     </>
   );
 };
@@ -40,3 +34,11 @@ const signInWithGoogle = () => {
   const provider = new firebase.auth.GoogleAuthProvider();
   auth.signInWithPopup(provider);
 };
+
+const SignInWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #333;
+`;

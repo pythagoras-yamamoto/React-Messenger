@@ -23,43 +23,41 @@ export const SendMessage = ({ scroll }) => {
   }
 
   return (
-    <div>
-      <form onSubmit={sendMessage}>
-        <SendMsg>
-          <Input
-            style={{
-              width: "70vw",
-              maxWidth: "680px",
-              fontSize: "14px",
-              color: "white",
-              fontWeight: "500",
-              margin: "15px 10px 20px 10px",
-              borderBottomColor: "white",
-            }}
-            inputProps={{ "aria-label": "description" }}
-            placeholder="メッセージを入力"
-            type="text"
-            value={msg}
-            onChange={(e) => setMsg(e.target.value)}
-          />
-          <Button
-            variant="outlined"
-            style={{
-              height: "40px",
-              width: "100px",
-              color: "#CBD5E0",
-              border: "solid 1px grey",
-              fontSize: "12px",
-              fontWeight: "600",
-              margin: "10px",
-            }}
-            type="submit"
-          >
-            送信
-          </Button>
-        </SendMsg>
-      </form>
-    </div>
+    <form onSubmit={sendMessage}>
+      <SendMsg>
+        <Input
+          style={{
+            width: "70vw",
+            maxWidth: "680px",
+            fontSize: "14px",
+            color: "white",
+            fontWeight: "500",
+            margin: "15px 10px 20px 10px",
+            borderBottomColor: "white",
+          }}
+          inputProps={{ "aria-label": "description" }}
+          placeholder="メッセージを入力"
+          type="text"
+          value={msg}
+          onChange={(e) => setMsg(e.target.value)}
+        />
+        <Button
+          variant="outlined"
+          style={{
+            height: "40px",
+            width: "100px",
+            color: "#CBD5E0",
+            border: "solid 1px grey",
+            fontSize: "12px",
+            fontWeight: "600",
+            margin: "10px",
+          }}
+          type="submit"
+        >
+          送信
+        </Button>
+      </SendMsg>
+    </form>
   );
 };
 

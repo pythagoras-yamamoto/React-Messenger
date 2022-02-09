@@ -18,34 +18,28 @@ export const Chat = () => {
   }, []);
   return (
     <>
-      <Navbar photo={messages.photoURL} />
-      <S>
-        <Wrapper>
-          <MsgWrapper>
-            {messages.map(({ id, text, photoURL, uid }) => (
-              <div>
-                <MsgItem
-                  key={id}
-                  className={`msg ${
-                    uid === auth.currentUser.uid ? "sent" : "received"
-                  }`}
-                >
-                  <Photo src={photoURL} alt="" />
-                  <TextWrapper>
-                    <Text>{text}</Text>
-                  </TextWrapper>
-                </MsgItem>
-              </div>
-            ))}
-          </MsgWrapper>
-        </Wrapper>
-      </S>
+      <Navbar />
+      <Wrapper>
+        <MsgWrapper>
+          {messages.map(({ id, text, photoURL, uid }) => (
+            <MsgItem
+              key={id}
+              className={`msg ${
+                uid === auth.currentUser.uid ? "sent" : "received"
+              }`}
+            >
+              <Photo src={photoURL} alt="" />
+              <TextWrapper>
+                <Text>{text}</Text>
+              </TextWrapper>
+            </MsgItem>
+          ))}
+        </MsgWrapper>
+      </Wrapper>
       <SendMessage />
     </>
   );
 };
-
-const S = styled.div``;
 
 const Wrapper = styled.div`
   display: flex;
@@ -57,23 +51,21 @@ const Wrapper = styled.div`
 const MsgWrapper = styled.div`
   width: 70vw;
   margin: 80px 0;
-  // border-right: solid 2px #333;
-  // border-left: solid 2px #333;
 
   @media screen and (max-width: 680px) {
     width: 85vw;
   }
 `;
 
-export const Photo = styled.img`
+const MsgItem = styled.div`
+  display: flex;
+`;
+
+const Photo = styled.img`
   border-radius: 50%;
   margin: 20px;
   height: 50px;
   width: 50px;
-`;
-
-const MsgItem = styled.div`
-  display: flex;
 `;
 
 const TextWrapper = styled.div`

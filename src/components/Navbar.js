@@ -1,16 +1,14 @@
 import React from "react";
-import { Link, BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
+
+import { BrowserRouter } from "react-router-dom";
 import { SignOutButton } from "./auth/SignOutButton";
 
-export const Navbar = (photoURL) => {
+export const Navbar = () => {
   return (
     <BrowserRouter>
       <NavWrapper>
         <Nav>
-          {/* <Link to="/" className="nav-item">
-            ChatApp
-          </Link> */}
           <Logo>ChatApp</Logo>
           <SignOutButton />
         </Nav>
